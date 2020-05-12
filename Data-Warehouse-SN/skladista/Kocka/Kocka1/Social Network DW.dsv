@@ -1,0 +1,157 @@
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="b81f025b-3c02-4043-a471-d01c22d303ce" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Social Network DW</ID>
+  <Name>Social Network DW</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CurrentLayout</Name>
+      <Value>_ALL_TABLES_</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:SchemaRestriction</Name>
+      <Value></Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:RetrieveRelationships</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:Layouts</Name>
+      <Value>
+        <Layouts xmlns="">
+          <Diagram>
+            <Name>_ALL_TABLES_</Name>
+            <DiagramLayout />
+            <ShowRelationshipNames>False</ShowRelationshipNames>
+            <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
+            <DiagramViewPortLeft>0</DiagramViewPortLeft>
+            <DiagramViewPortTop>0</DiagramViewPortTop>
+            <DiagramBoundingLeft>0</DiagramBoundingLeft>
+            <DiagramBoundingTop>0</DiagramBoundingTop>
+            <DiagramZoom>100</DiagramZoom>
+          </Diagram>
+        </Layouts>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <DataSourceID>Social Network DW</DataSourceID>
+  <Schema>
+    <xs:schema id="Social_x0020_Network_x0020_DW" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+      <xs:element name="Social_x0020_Network_x0020_DW" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:design-time-name="a5b82076-5008-41b2-893f-937e9a17220e">
+        <xs:complexType>
+          <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="dbo_DImAgeGroup" msprop:design-time-name="7a47179c-e2d8-4886-bd26-a9f7646c8bac" msprop:DbTableName="DImAgeGroup" msprop:FriendlyName="DImAgeGroup" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_age_group_dw" msprop:design-time-name="846fd193-126f-4df1-8e31-337e0ced88ef" msprop:DbColumnName="id_age_group_dw" msprop:FriendlyName="id_age_group_dw" type="xs:int" />
+                  <xs:element name="description" msprop:design-time-name="062007ed-a50d-4864-af37-84115f2f887e" msprop:DbColumnName="description" msprop:FriendlyName="description">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimCountry" msprop:design-time-name="e297dbc6-9686-4b58-a64b-21a6e20fd136" msprop:DbTableName="DimCountry" msprop:FriendlyName="DimCountry" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_country_dw" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="1022f71c-d743-41fc-8725-8efa0d78457b" msprop:DbColumnName="id_country_dw" msprop:FriendlyName="id_country_dw" type="xs:int" />
+                  <xs:element name="country" msprop:design-time-name="a0f97916-e64d-49e5-af4b-66ca20a6a57e" msprop:DbColumnName="country" msprop:FriendlyName="country">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="100" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                  <xs:element name="id_country_old" msprop:design-time-name="bfdea62c-8553-4b7f-96fb-b966b71a7543" msprop:DbColumnName="id_country_old" msprop:FriendlyName="id_country_old" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimGender" msprop:design-time-name="6b06fe27-d323-4ac1-968f-fdf969a2026d" msprop:DbTableName="DimGender" msprop:FriendlyName="DimGender" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_gender_dw" msprop:design-time-name="7ab28857-dc1a-4b28-a54e-5283c6911252" msprop:DbColumnName="id_gender_dw" msprop:FriendlyName="id_gender_dw" type="xs:int" />
+                  <xs:element name="gender" msprop:design-time-name="d74882c9-490b-4bbb-a9eb-d8d67fcebd52" msprop:DbColumnName="gender" msprop:FriendlyName="gender">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="10" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_DimTimestamp" msprop:design-time-name="028e6e72-4f44-4a2b-9e54-0c89017b8382" msprop:DbTableName="DimTimestamp" msprop:FriendlyName="DimTimestamp" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_timestamp_dw" msprop:design-time-name="5e67f202-0f28-4566-80d0-c8d7baaca9f6" msprop:DbColumnName="id_timestamp_dw" msprop:FriendlyName="id_timestamp_dw" type="xs:int" />
+                  <xs:element name="timestamp" msprop:design-time-name="722b850a-d69e-4cc3-8db7-daa4008ab3b4" msprop:DbColumnName="timestamp" msprop:FriendlyName="timestamp" type="xs:dateTime" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+            <xs:element name="dbo_FactTag" msprop:design-time-name="d5498017-d83c-47ee-94d9-688cf19d4eb3" msprop:DbTableName="FactTag" msprop:FriendlyName="FactTag" msprop:DbSchemaName="dbo" msprop:TableType="Table">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="id_tag_dw" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:design-time-name="697fdecc-9e60-444d-bf73-7ce6d19a5de1" msprop:DbColumnName="id_tag_dw" msprop:FriendlyName="id_tag_dw" type="xs:int" />
+                  <xs:element name="fk_id_timestamp_dw" msprop:design-time-name="fc90e2fb-7acd-4ca0-a5c0-8c2523e42802" msprop:DbColumnName="fk_id_timestamp_dw" msprop:FriendlyName="fk_id_timestamp_dw" type="xs:int" minOccurs="0" />
+                  <xs:element name="fk_id_country_dw" msprop:design-time-name="77a968a7-d98b-47d1-9622-f4b2cc2ba9d6" msprop:DbColumnName="fk_id_country_dw" msprop:FriendlyName="fk_id_country_dw" type="xs:int" minOccurs="0" />
+                  <xs:element name="fk_id_gender_dw" msprop:design-time-name="d3af8b04-aff4-4cb7-be17-241d5d9f0eca" msprop:DbColumnName="fk_id_gender_dw" msprop:FriendlyName="fk_id_gender_dw" type="xs:int" minOccurs="0" />
+                  <xs:element name="fk_id_age_group_dw" msprop:design-time-name="8ae515ef-80b5-405d-bfb5-21fb69133653" msprop:DbColumnName="fk_id_age_group_dw" msprop:FriendlyName="fk_id_age_group_dw" type="xs:int" minOccurs="0" />
+                  <xs:element name="counter" msprop:design-time-name="3b2be902-8eec-43df-a8e4-4af135f27781" msprop:DbColumnName="counter" msprop:FriendlyName="counter" type="xs:int" minOccurs="0" />
+                  <xs:element name="view_counter" msprop:design-time-name="efa9c55f-b8f8-4080-8fa4-e02eda364610" msprop:DbColumnName="view_counter" msprop:FriendlyName="view_counter" type="xs:int" minOccurs="0" />
+                  <xs:element name="like_counter" msprop:design-time-name="7b479278-b348-465f-8473-91012ebd9735" msprop:DbColumnName="like_counter" msprop:FriendlyName="like_counter" type="xs:int" minOccurs="0" />
+                  <xs:element name="follow_counter" msprop:design-time-name="38bb9276-4560-47b2-bb64-915c668c8bbd" msprop:DbColumnName="follow_counter" msprop:FriendlyName="follow_counter" type="xs:int" minOccurs="0" />
+                  <xs:element name="id_tag_old" msprop:design-time-name="feabb1f4-3053-49ec-86b6-e0a79c4fc0e5" msprop:DbColumnName="id_tag_old" msprop:FriendlyName="id_tag_old" type="xs:int" minOccurs="0" />
+                </xs:sequence>
+              </xs:complexType>
+            </xs:element>
+          </xs:choice>
+        </xs:complexType>
+        <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DImAgeGroup" />
+          <xs:field xpath="id_age_group_dw" />
+        </xs:unique>
+        <xs:unique name="dbo_DimCountry_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimCountry" />
+          <xs:field xpath="id_country_dw" />
+        </xs:unique>
+        <xs:unique name="dbo_DimGender_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimGender" />
+          <xs:field xpath="id_gender_dw" />
+        </xs:unique>
+        <xs:unique name="dbo_DimTimestamp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_DimTimestamp" />
+          <xs:field xpath="id_timestamp_dw" />
+        </xs:unique>
+        <xs:unique name="dbo_FactTag_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+          <xs:selector xpath=".//dbo_FactTag" />
+          <xs:field xpath="id_tag_dw" />
+        </xs:unique>
+        <xs:keyref name="FK_FactTab_DimGender" refer="dbo_DimGender_Constraint1">
+          <xs:selector xpath=".//dbo_FactTag" />
+          <xs:field xpath="fk_id_gender_dw" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactTab_DImAgeGroup" refer="Constraint1">
+          <xs:selector xpath=".//dbo_FactTag" />
+          <xs:field xpath="fk_id_age_group_dw" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactTab_DimTimestamp" refer="dbo_DimTimestamp_Constraint1">
+          <xs:selector xpath=".//dbo_FactTag" />
+          <xs:field xpath="fk_id_timestamp_dw" />
+        </xs:keyref>
+        <xs:keyref name="FK_FactTab_DimCountry" refer="dbo_DimCountry_Constraint1">
+          <xs:selector xpath=".//dbo_FactTag" />
+          <xs:field xpath="fk_id_country_dw" />
+        </xs:keyref>
+      </xs:element>
+    </xs:schema>
+    <Social_x0020_Network_x0020_DW xmlns="" />
+  </Schema>
+</DataSourceView>
